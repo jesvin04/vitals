@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './LoginPage';
+import LoginPage from './LoginPage/LoginPage';
+import ShoppingList from './ShoppingList/ShoppingList';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        {/*Public Route*/}
+        <Route path='/login' element={<LoginPage/>} />
+
+        {/*Protected Routes for Users*/}
+        <Route path='/shopping' element={<ShoppingList/>} />
+        
+        {/* Redirect unknown routes to login */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
