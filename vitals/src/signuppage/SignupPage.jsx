@@ -38,7 +38,7 @@ const SignupPage = () => {
                 <button type="submit" className="btn submit">Sign Up</button>
               </form>
               <p className="loginRedirect">
-                Already have an account? <Link to="/loginpage">Login</Link>
+                Already have an account? <Link to="/login">Login</Link>
               </p>
             </div>
           </div>
