@@ -26,29 +26,58 @@ const products = [
   // Add more products as needed
 ];
 
-const ProductCard = ({ product }) => {
+export default function ShoppingList() {
+  
+
   return (
-    <div className="product-card">
-      <img src={product.image} alt={product.name} className="product-image" />
-      <h3 className="product-name">{product.name}</h3>
-      <p className="product-price">{product.price}</p>
-      <p className="product-rating">Rating: {product.rating} ★</p>
-      <button className="add-to-cart-button">Add to Cart</button>
+    <div>
+
+      {/* Main Content */}
+      
+        <header>
+          <div className="container">
+            <h1>Vitals</h1>
+            <nav>
+              <a href="/">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Features</a>
+              <a href="#">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        <main>
+          <section className="shopping-list-section">
+            <div className="container">
+              <h2>Your Recommended Products</h2>
+              <div className="product-list">
+                {products.map((product) => (
+                  <div key={product.id} className="product-item">
+                    <img
+                      src={product.image}
+                      
+                      width={200}
+                      height={200}
+                    />
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
+                    
+                    
+                    <p className="product-platform">{product.platform}</p>
+                    <button className="btn shop-now">Shop Now</button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          <div className="container">
+            <p>&copy; 2024 Vitals. All rights reserved.</p>
+          </div>
+        </footer>
+      
     </div>
   );
-};
-
-const ShoppingList = () => {
-  return (
-    <div className="shopping-list-container">
-      <h2>Recommended Products</h2>
-      <div className="products-grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default ShoppingList;
+}
