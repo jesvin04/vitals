@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import LoginPage from "./LoginPage/LoginPage";
-import ShoppingList from "./ShoppingList/ShoppingList";
-import SignupPage from "./signuppage/SignupPage";
-import Vsymbol from "./vsymbol/v";
 
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from './LoginPage/LoginPage';
+import ShoppingList from './ShoppingList/ShoppingList';
+import PersonalisedPlan from './PersonalisedPlan/PersonalisedPlan';
+import Webinar from './Webinar/Webinar';
+import SignupPage from './signuppage/SignupPage';
+import React, { useEffect, useState } from "react";
+import Vsymbol from "./vsymbol/v";
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,10 +25,12 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
 
         {/*Protected Routes for Users*/}
-        <Route path="/shopping" element={<ShoppingList />} />
 
-        <Route path="/signuppage" element={<SignupPage />} />
+        <Route path='/shopping' element={<ShoppingList/>} />
 
+        <Route path="/signup" element={<SignupPage/>} />
+        <Route path="persplan" element={<PersonalisedPlan/>} />
+        <Route path="/webinar" element={<Webinar/>} />
         {/* Redirect unknown routes to login */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
