@@ -4,26 +4,76 @@ import './ShoppingList.css'; // Ensure you create a corresponding CSS file for s
 const products = [
   {
     id: 1,
-    name: 'Wireless Headphones',
-    price: '$59.99',
-    image: 'https://via.placeholder.com/150',
+    name: "Blood Glucose Monitor",
+    description: "Portable device to monitor blood sugar levels for diabetes patients.",
+    price: 39.99,
     rating: 4.5,
+    image: "/blood-glucose-monitor.svg?height=200&width=200",
+    platform: "Amazon"
   },
   {
     id: 2,
-    name: 'Smartphone',
-    price: '$699.99',
-    image: 'https://via.placeholder.com/150',
+    name: "Diabetic-Friendly Snacks (Pack of Mixed Nuts)",
+    description: "Healthy, low-glycemic index snack for controlling blood sugar levels.",
+    price: 15.99,
     rating: 4.8,
+    image: "/diabetic-snacks.svg?height=200&width=200",
+    platform: "Flipkart"
   },
   {
     id: 3,
-    name: 'Gaming Laptop',
-    price: '$1299.99',
-    image: 'https://via.placeholder.com/150',
+    name: "Foot Care Cream for Diabetics",
+    description: "Prevents foot problems like dryness and infections common in diabetes.",
+    price: 12.99,
     rating: 4.7,
+    image: "/foot-care-cream.svg?height=200&width=200",
+    platform: "Amazon"
   },
-  // Add more products as needed
+  {
+    id: 4,
+    name: "Smart Water Bottle with Hydration Tracker",
+    description: "Tracks hydration levels and reminds you to drink water for optimal health.",
+    price: 34.99,
+    rating: 4.3,
+    image: "/smart-water-bottle.svg?height=200&width=200",
+    platform: "Flipkart"
+  },
+  {
+      id: 5,
+      name: "Insulated Lunch Bag for Meal Prep",
+      description: "Keeps diabetic-friendly meals fresh and portable for on-the-go individuals.",
+      price: 29.99,
+      rating: 4.6,
+      image: "/insulated-lunch-bag.svg?height=200&width=200",
+      platform: "Amazon"
+    },
+    {
+      id: 6,
+      name: "Low-Carb Meal Replacement Shakes",
+      description: "Nutrient-dense shakes designed to maintain stable blood sugar levels.",
+      price: 19.99,
+      rating: 4.4,
+      image: "/low-carb-shakes.svg?height=200&width=200",
+      platform: "Flipkart"
+    },
+    {
+      id: 7,
+      name: "Compression Socks for Diabetics",
+      description: "Improves circulation and reduces swelling for diabetic foot care.",
+      price: 14.99,
+      rating: 4.7,
+      image: "/compression-socks.svg?height=200&width=200",
+      platform: "Amazon"
+    },
+    {
+      id: 8,
+      name: "Digital Food Scale",
+      description: "Helps accurately measure portion sizes to manage carb intake effectively.",
+      price: 24.99,
+      rating: 4.5,
+      image: "/digital-food-scale.svg?height=200&width=200",
+      platform: "Flipkart"
+    },
 ];
 
 export default function ShoppingList() {
