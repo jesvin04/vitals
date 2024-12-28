@@ -1,9 +1,15 @@
-/* Resetting some default styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+}
+
+.loginContainer{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header Styling */
@@ -38,7 +44,10 @@ header nav a:hover {
   color: #ffcc00;
 }
 
-/* Main Section Styling */
+main{
+  flex: 1;
+}
+
 main .auth-section {
   display: flex;
   justify-content: center;
@@ -92,6 +101,8 @@ button.btn.submit {
   color: white;
   border: none;
   padding: 10px 20px;
+  display: flex;
+  align-self: center;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;

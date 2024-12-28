@@ -56,15 +56,16 @@ body {
   
   /* Button */
   .btn.submit {
-    background: #6a11cb;
+    background-color: #0056b3;
     color: white;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
     border: none;
+    padding: 10px 20px;
+    display: flex;
+    align-self: center;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
   }
   
   .btn.submit:hover {

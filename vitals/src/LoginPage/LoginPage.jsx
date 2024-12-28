@@ -4,7 +4,7 @@ import './LoginPage.css';
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="loginContainer">
       <header>
         <div className="container">
           <h1>Vitals</h1>
